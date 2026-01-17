@@ -42,9 +42,37 @@ LLM_MODEL=gpt-3.5-turbo
 ▶️ Run Application
 npm run dev
 
+📮 POST /api/validate
+{
+  "email": "user@example.com",
+  "phone": "+1234567890",
+  "name": "John Doe",
+  "address": "123 Main St",
+  "message": "Hello world"
+}
+
+{
+  "overall_status": "VALID | INVALID | SUSPICIOUS",
+  "fields": {
+    "field_name": {
+      "status": "VALID | INVALID | SUSPICIOUS",
+      "issues": [],
+      "suggested_value": ""
+    }
+  },
+  "security_warnings": [],
+  "confidence_score": 0
+}
+
+📂 Project Structure
+smart-form-validator/
+├── client/ ⚛️
+├── server/ 🟢
+└── package.json
 
 🌐 Frontend: http://localhost:3000
 
 🔌 Backend: http://localhost:5000
+
 
 
