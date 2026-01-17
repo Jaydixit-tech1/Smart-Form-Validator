@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="AI-powered Smart Form Validator" />
+    <title>Smart Form Validator</title>
+    <style>
+      /* Fallback styles in case CSS doesn't load */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .loading {
+        color: white;
+        text-align: center;
+        padding: 50px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="color: white; text-align: center; padding: 50px;">
+        <h1>JavaScript Required</h1>
+        <p>You need to enable JavaScript to run this app.</p>
+      </div>
+    </noscript>
+    <div id="root">
+      <div class="loading">Loading Smart Form Validator...</div>
+    </div>
+    <script>
+      // Diagnostic script to check if React is mounting
+      setTimeout(function() {
+        const root = document.getElementById('root');
+        const loading = root.querySelector('.loading');
+        if (loading && loading.parentElement === root) {
+          console.error('React did not mount - still showing loading message');
+          loading.innerHTML = '<div style="color: #ff6b6b; padding: 20px;"><h2>React App Failed to Load</h2><p>Please check the browser console (F12) for errors.</p><p>Make sure the React development server is running.</p><button onclick="window.location.reload()" style="padding: 10px 20px; margin-top: 10px; cursor: pointer;">Reload Page</button></div>';
+        }
+      }, 5000);
+      
+      // Log when page loads
+      window.addEventListener('load', function() {
+        console.log('Page loaded, waiting for React to mount...');
+      });
+    </script>
+  </body>
+</html>

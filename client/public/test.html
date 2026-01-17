@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>React Mount Test</title>
+  </head>
+  <body>
+    <h1>React Mount Test</h1>
+    <div id="root"></div>
+    <script>
+      console.log('Test script loaded');
+      console.log('Root element:', document.getElementById('root'));
+      
+      // Check if React bundle is loading
+      setTimeout(() => {
+        const scripts = document.getElementsByTagName('script');
+        console.log('Scripts found:', scripts.length);
+        for (let i = 0; i < scripts.length; i++) {
+          console.log('Script', i, ':', scripts[i].src || 'inline');
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>
